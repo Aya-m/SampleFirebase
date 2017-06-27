@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVn-NT-Q56">
+                                <rect key="frame" x="29" y="188" width="318" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Vdr-19-QgG"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="twitterLogin"/>
+                                <connections>
+                                    <action selector="twitterButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBM-ZD-XmH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QH-lA-hzz">
+                                <rect key="frame" x="29" y="335" width="318" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="xne-PY-hWf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="facebookLogin"/>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bw5-Lv-Hrw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rjx-Y2-G6E">
+                                <rect key="frame" x="260" y="597" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQH-i4-otJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckd-yp-pVC">
+                                <rect key="frame" x="29" y="597" width="43" height="30"/>
+                                <state key="normal" title="Unlink"/>
+                                <connections>
+                                    <action selector="unlinkButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAJ-xH-Ruh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="JVn-NT-Q56" secondAttribute="trailing" constant="12" id="2La-gq-bsm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6QH-lA-hzz" secondAttribute="trailing" constant="12" id="2qj-uf-gHU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rjx-Y2-G6E" secondAttribute="bottom" constant="40" id="6VG-vA-Aas"/>
+                            <constraint firstItem="6QH-lA-hzz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="Dl6-6H-EEt"/>
+                            <constraint firstItem="JVn-NT-Q56" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EeW-tS-rXQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rjx-Y2-G6E" secondAttribute="trailing" constant="39" id="ITu-7S-Xdz"/>
+                            <constraint firstItem="6QH-lA-hzz" firstAttribute="top" secondItem="JVn-NT-Q56" secondAttribute="bottom" constant="85" id="J4c-eE-hkC"/>
+                            <constraint firstItem="Ckd-yp-pVC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="UMU-0b-y7E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rjx-Y2-G6E" secondAttribute="trailing" constant="39" id="cjz-A0-Fpz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ckd-yp-pVC" secondAttribute="bottom" constant="40" id="dpK-WN-T2X"/>
+                            <constraint firstItem="Rjx-Y2-G6E" firstAttribute="baseline" secondItem="Ckd-yp-pVC" secondAttribute="baseline" id="feq-5t-HwA"/>
+                            <constraint firstItem="6QH-lA-hzz" firstAttribute="top" secondItem="JVn-NT-Q56" secondAttribute="bottom" constant="85" id="fv3-bd-eFe"/>
+                            <constraint firstItem="JVn-NT-Q56" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="gaK-hx-rOF"/>
+                            <constraint firstItem="6QH-lA-hzz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ndf-qi-Xaa"/>
+                            <constraint firstItem="JVn-NT-Q56" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="qxr-08-TfZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rjx-Y2-G6E" secondAttribute="bottom" constant="40" id="vee-mV-4RN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="facebookButton" destination="6QH-lA-hzz" id="16Y-PC-Ijr"/>
+                        <outlet property="twitterButton" destination="JVn-NT-Q56" id="l0Z-jj-NVG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Database View Controller-->
+        <scene sceneID="cCb-H2-mxf">
+            <objects>
+                <viewController storyboardIdentifier="databaseView" id="CWw-9K-dD3" customClass="DatabaseViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RB1-31-hHl"/>
+                        <viewControllerLayoutGuide type="bottom" id="0NC-N5-7yD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cM7-dB-Kdi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cZ-2f-9xe">
+                                <rect key="frame" x="33" y="61" width="50" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Write"/>
+                                <connections>
+                                    <action selector="writeButtonTapped:" destination="CWw-9K-dD3" eventType="touchUpInside" id="EAm-rk-V4B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9E-Ef-86n">
+                                <rect key="frame" x="149" y="314" width="77" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="All Read"/>
+                                <connections>
+                                    <action selector="allReadButtonTapped:" destination="CWw-9K-dD3" eventType="touchUpInside" id="iVn-Jg-bEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTP-gK-dkQ">
+                                <rect key="frame" x="33" y="558" width="69" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButtonTapped:" destination="CWw-9K-dD3" eventType="touchUpInside" id="uOy-ks-keg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wad-8B-MLP">
+                                <rect key="frame" x="293" y="61" width="49" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="readButtonTapped:" destination="CWw-9K-dD3" eventType="touchUpInside" id="bVm-p2-ltr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5b-eM-PEL">
+                                <rect key="frame" x="266" y="558" width="76" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Remove"/>
+                                <connections>
+                                    <action selector="removeButtonTapped:" destination="CWw-9K-dD3" eventType="touchUpInside" id="Mw2-e4-GUR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87096335049084694" green="0.96481851856097889" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5cZ-2f-9xe" firstAttribute="top" secondItem="RB1-31-hHl" secondAttribute="bottom" constant="41" id="5et-Z5-gDb"/>
+                            <constraint firstItem="0NC-N5-7yD" firstAttribute="top" secondItem="WTP-gK-dkQ" secondAttribute="bottom" constant="71" id="BFw-dx-iDd"/>
+                            <constraint firstItem="wad-8B-MLP" firstAttribute="top" secondItem="RB1-31-hHl" secondAttribute="bottom" constant="41" id="Zbx-xu-JSc"/>
+                            <constraint firstItem="0NC-N5-7yD" firstAttribute="top" secondItem="W5b-eM-PEL" secondAttribute="bottom" constant="71" id="cWB-CQ-IL4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W5b-eM-PEL" secondAttribute="trailing" constant="17" id="fWf-k2-5JV"/>
+                            <constraint firstItem="WTP-gK-dkQ" firstAttribute="leading" secondItem="5cZ-2f-9xe" secondAttribute="leading" id="fYi-JP-jSH"/>
+                            <constraint firstItem="W9E-Ef-86n" firstAttribute="centerY" secondItem="cM7-dB-Kdi" secondAttribute="centerY" id="lmx-48-Uvs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wad-8B-MLP" secondAttribute="trailing" constant="17" id="oRU-FO-diZ"/>
+                            <constraint firstItem="W9E-Ef-86n" firstAttribute="centerX" secondItem="cM7-dB-Kdi" secondAttribute="centerX" id="vad-xZ-HK6"/>
+                            <constraint firstItem="5cZ-2f-9xe" firstAttribute="leading" secondItem="cM7-dB-Kdi" secondAttribute="leadingMargin" constant="17" id="ySC-ct-5w1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OZ7-Bg-bA1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="142.57871064467767"/>
+        </scene>
+        <!--Storage View Controller-->
+        <scene sceneID="8kH-48-o8h">
+            <objects>
+                <viewController storyboardIdentifier="storageView" id="YVu-lc-If1" customClass="StorageViewController" customModule="FirebaseSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WNq-gH-KRf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhX-zO-ZWS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p6Z-an-yJN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjB-04-cfA">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="N6O-9P-SCX"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Upload" id="RKY-AR-TGu">
+                                        <connections>
+                                            <action selector="uploadButtonTapped:" destination="YVu-lc-If1" id="aEM-ra-A8H"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Io3-Da-pYV"/>
+                                    <barButtonItem title="Download" id="LJy-Pc-QDg">
+                                        <connections>
+                                            <action selector="downloadButtonTapped:" destination="YVu-lc-If1" id="OMn-0l-gn3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XL4-7C-Bwg"/>
+                                    <barButtonItem style="plain" id="cZz-J1-nzJ">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j69-5P-gOP">
+                                            <rect key="frame" x="315" y="7" width="45" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Delete"/>
+                                            <connections>
+                                                <action selector="DeleteButtonTapped:" destination="YVu-lc-If1" eventType="touchUpInside" id="Y8C-ub-rGR"/>
+                                            </connections>
+                                        </button>
+                                        <connections>
+                                            <action selector="DeleteButtonTapped:" destination="YVu-lc-If1" id="jgU-en-vFF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jjB-04-cfA" firstAttribute="leading" secondItem="p6Z-an-yJN" secondAttribute="leading" id="12R-7m-Bps"/>
+                            <constraint firstAttribute="trailing" secondItem="jjB-04-cfA" secondAttribute="trailing" id="huc-7Q-P15"/>
+                            <constraint firstItem="hhX-zO-ZWS" firstAttribute="top" secondItem="jjB-04-cfA" secondAttribute="bottom" id="l69-fM-fLl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bE-6H-3JB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664.8" y="142.57871064467767"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebookLogin" width="318" height="62"/>
+        <image name="twitterLogin" width="318" height="62"/>
+    </resources>
+</document>
